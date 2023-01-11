@@ -10,13 +10,13 @@ Please see below for instructions on loading and uploading prompts.
 
 All prompts can be loaded from LangChain by specifying the desired path.
 The path should be relative to the `prompts` folder here.
-For example, if there is a file at `prompts/qa/basic.py`, the path you want to specify is `qa/basic.py`
+For example, if there is a file at `prompts/qa/stuff/basic/prompt.yaml`, the path you want to specify is `qa/stuff/basic/prompt.yaml`
 
 Once you have that path, you can load it in the following manner:
 
 ```python
 from langchain.prompts import load_from_hub
-prompt = load_from_hub("qa/basic.json")
+prompt = load_from_hub("qa/stuff/basic/prompt.yaml")
 ```
 
 ## Uploading

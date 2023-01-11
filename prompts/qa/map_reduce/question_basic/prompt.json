@@ -1,0 +1,9 @@
+{
+    "input_variables": [
+        "context",
+        "question"
+    ],
+    "output_parser": null,
+    "template": "Use the following portion of a long document to see if any of the text is relevant to answer the question. \nReturn any relevant text verbatim.\n{context}\nQuestion: {question}\nRelevant text, if any:",
+    "template_format": "f-string"
+}
