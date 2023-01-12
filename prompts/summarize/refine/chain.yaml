@@ -1,0 +1,13 @@
+# Prompt config for a chain?
+
+input_variables: ['text']
+output_parser: null
+# what primitives do we allow?
+template: [
+  map:
+    input: 'text'
+    prompt: 'prompt.yaml',
+  reduce:
+    prompt: 'promptSummarize.yaml'
+]
+template_format: f-string
