@@ -1,5 +1,7 @@
 # LangChainHub
 
+[Warning: very beta, may change drastically]
+
 Taking inspiration from Hugging Face Hub, this is collection of all artifacts useful for working with LangChain chains.
 To start, this focuses on prompts.
 This is intended to be a central place to upload and share prompts.
@@ -24,6 +26,10 @@ prompt = load_from_hub("qa/stuff/basic/prompt.yaml")
 There are three methods for uploading prompts: `json`, `yaml`, and `python`.
 The suggested options are `json` and `yaml`, but we provide `python` as an option for more flexibility.
 Please see the below sections for instructions for uploading each format.
+
+You should upload your prompt file to a folder in the appropriate use case section.
+In addition to the prompt file, you should also add a README.md for that folder, including any relevant information about prompt.
+This can be how it was created, what it should be used for, what the variables mean, etc.
 
 ### `json`
 To get a properly formatted json file, if you have prompt in memory in Python you can run:
