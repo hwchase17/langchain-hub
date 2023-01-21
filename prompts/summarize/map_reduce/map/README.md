@@ -25,11 +25,10 @@ Below is a code snippet for how to use the prompt.
 
 ```python
 from langchain.prompts import load_from_hub
-from langchain.chains import VectorDBQA
+from langchain.chains.summarize import load_summarize_chain
 
 llm = ...
-vectorstore = ...
-prompt = load_from_hub('vector_db_qa/<file-name>')
-chain = VectorDBQA.from_llm(llm, prompt=prompt, vectorstore=vectorstore)
+prompt = load_from_hub('summarize/map_reduce/map/<file-name>')
+chain = load_summarize_chain(llm, chain_type="map_reduce", map_prompt=prompt)
 ```
 
