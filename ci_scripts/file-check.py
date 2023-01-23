@@ -7,14 +7,13 @@ folders = BASE_FOLDER.glob("**")
 
 
 def check_files(files):
-    if len(files) != 2:
-        raise ValueError(f"Each directory should have two files, got {len(files)}")
     file_names = [f.name for f in files]
     if "README.md" not in file_names:
         raise ValueError(f"Expected to find a README.md file, but found {files}")
-    other_file = [file for file in files if file.name != "README.md"][0]
-    if other_file.suffix in (".json", ".yaml"):
-        load_prompt(other_file)
+    other_files = [file for file in files if file.name != "README.md"]
+    for other_file in other_files:
+        if other_file.suffix in (".json", ".yaml"):
+            load_prompt(other_file)
     # TODO: testing for python files
 
 
