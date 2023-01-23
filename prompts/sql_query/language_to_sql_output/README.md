@@ -1,22 +1,16 @@
-<!-- Add a template for READMEs that capture the utility of prompts -->
+# Description of Language-To-SQL Prompts
 
-# Description of {{prompt}}
+Prompts designed to convert language to relevant SQL query to execute.
 
-{{High level text description of the prompt, including use cases.}}
-
-## Compatible Chains
-
-Below is a list of chains we expect this prompt to be compatible with.
-
-1. {{Chain Name}}: {{Path to chain in module}}
-2. ...
 
 ## Inputs
 
 This is a description of the inputs that the prompt expects.
 
-1. {{input_var}}: {{Description}}
-2. ...
+1. `input`: Question to be answered.
+2. `table_info`: Relevant information about the tables present in the schema.
+3. `dialect`: Dialect of SQL to write the query in
+4. `top_k`: Number of rows to return for most queries (used to avoid returning too much and overloading the context window).
 
 
 ## Usage

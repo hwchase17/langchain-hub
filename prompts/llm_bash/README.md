@@ -1,22 +1,12 @@
-<!-- Add a template for READMEs that capture the utility of prompts -->
+# Description of LLM Bash Prompt
 
-# Description of {{prompt}}
-
-{{High level text description of the prompt, including use cases.}}
-
-## Compatible Chains
-
-Below is a list of chains we expect this prompt to be compatible with.
-
-1. {{Chain Name}}: {{Path to chain in module}}
-2. ...
+Prompt designed to convert natural language to bash command.
 
 ## Inputs
 
 This is a description of the inputs that the prompt expects.
 
-1. {{input_var}}: {{Description}}
-2. ...
+1. `question`: User question to be answered by writing a bash command.
 
 
 ## Usage
@@ -25,10 +15,10 @@ Below is a code snippet for how to use the prompt.
 
 ```python
 from langchain.prompts import load_from_hub
-from langchain.chains import LLMBash
+from langchain.chains import LLMBashChain
 
 llm = ...
 prompt = load_from_hub('llm_bash/<file-name>')
-chain = LLMBash(llm=llm, prompt=prompt)
+chain = LLMBashChain(llm=llm, prompt=prompt)
 ```
 

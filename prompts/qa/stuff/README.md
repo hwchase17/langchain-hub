@@ -1,22 +1,14 @@
-<!-- Add a template for READMEs that capture the utility of prompts -->
+# Description of QA Stuff Prompts
 
-# Description of {{prompt}}
+Prompts to use when doing question answering with chains using the `stuff` method.
 
-{{High level text description of the prompt, including use cases.}}
-
-## Compatible Chains
-
-Below is a list of chains we expect this prompt to be compatible with.
-
-1. {{Chain Name}}: {{Path to chain in module}}
-2. ...
 
 ## Inputs
 
 This is a description of the inputs that the prompt expects.
 
-1. {{input_var}}: {{Description}}
-2. ...
+1. `context`: Context to answer the question, is usually a concatenation of all relevant documents.
+2. `question`: Question to be answered.
 
 
 ## Usage
