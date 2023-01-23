@@ -1,0 +1,8 @@
+{
+    "input_variables": [
+        "question"
+    ],
+    "output_parser": null,
+    "template": "If someone asks you to perform a task, your job is to come up with a series of bash commands that will perform the task. There is no need to put \"#!/bin/bash\" in your answer. Make sure to reason step by step, using this format:\n\nQuestion: \"copy the files in the directory named 'target' into a new directory at the same level as target called 'myNewDirectory'\"\n\nI need to take the following actions:\n- List all files in the directory\n- Create a new directory\n- Copy the files from the first directory into the second directory\n```bash\nls\nmkdir myNewDirectory\ncp -r target/* myNewDirectory\n```\n\nThat is the format. Begin!\n\nQuestion: {question}",
+    "template_format": "f-string"
+}

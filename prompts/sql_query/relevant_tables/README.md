@@ -25,10 +25,11 @@ Below is a code snippet for how to use the prompt.
 
 ```python
 from langchain.prompts import load_from_hub
-from langchain.chains.summarize import load_summarize_chain
+from langchain.chains import SQLDatabaseSequentialChain
 
 llm = ...
-prompt = load_from_hub('summarize/refine/<file-name>')
-chain = load_summarize_chain(llm, chain_type="refine", refine_prompt=prompt)
+database = ...
+prompt = load_from_hub('sql_query/relevant_tables/<file-name>')
+chain = SQLDatabaseSequentialChain.from_llm(llm, database, decider_prompt=prompt)
 ```
 

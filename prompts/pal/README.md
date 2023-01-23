@@ -25,10 +25,12 @@ Below is a code snippet for how to use the prompt.
 
 ```python
 from langchain.prompts import load_from_hub
-from langchain.chains.summarize import load_summarize_chain
+from langchain.chains import PALChain
 
 llm = ...
-prompt = load_from_hub('summarize/refine/<file-name>')
-chain = load_summarize_chain(llm, chain_type="refine", refine_prompt=prompt)
+stop = ...
+get_answer_expr = ...
+prompt = load_from_hub('pal/<file-name>')
+chain = PALChain(llm=llm, prompt=prompt, stop=stop, get_answer_expr=get_answer_expr)
 ```
 

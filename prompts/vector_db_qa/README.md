@@ -25,10 +25,11 @@ Below is a code snippet for how to use the prompt.
 
 ```python
 from langchain.prompts import load_from_hub
-from langchain.chains.summarize import load_summarize_chain
+from langchain.chains import VectorDBQA
 
 llm = ...
-prompt = load_from_hub('summarize/refine/<file-name>')
-chain = load_summarize_chain(llm, chain_type="refine", refine_prompt=prompt)
+vectorstore = ...
+prompt = load_from_hub('vector_db_qa/<file-name>')
+chain = VectorDBQA.from_llm(llm, prompt=prompt, vectorstore=vectorstore)
 ```
 

@@ -23,12 +23,5 @@ This is a description of the inputs that the prompt expects.
 
 Below is a code snippet for how to use the prompt.
 
-```python
-from langchain.prompts import load_from_hub
-from langchain.chains.summarize import load_summarize_chain
-
-llm = ...
-prompt = load_from_hub('summarize/refine/<file-name>')
-chain = load_summarize_chain(llm, chain_type="refine", refine_prompt=prompt)
-```
+{{Code snippet}}
 

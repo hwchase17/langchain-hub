@@ -25,10 +25,11 @@ Below is a code snippet for how to use the prompt.
 
 ```python
 from langchain.prompts import load_from_hub
-from langchain.chains.summarize import load_summarize_chain
+from langchain.chains import APIChain
 
 llm = ...
-prompt = load_from_hub('summarize/refine/<file-name>')
-chain = load_summarize_chain(llm, chain_type="refine", refine_prompt=prompt)
+api_docs = ...
+prompt = load_from_hub('api/api_response/<file-name>')
+chain = APIChain.from_llm_and_api_docs(llm, api_docs, api_response_prompt=prompt)
 ```
 

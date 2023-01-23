@@ -25,10 +25,11 @@ Below is a code snippet for how to use the prompt.
 
 ```python
 from langchain.prompts import load_from_hub
-from langchain.chains.summarize import load_summarize_chain
+from langchain.chains import SQLDatabaseChain
 
 llm = ...
-prompt = load_from_hub('summarize/refine/<file-name>')
-chain = load_summarize_chain(llm, chain_type="refine", refine_prompt=prompt)
+database = ...
+prompt = load_from_hub('sql_query/language_to_sql_output/<file-name>')
+chain = SQLDatabaseChain(llm=llm, database=database, prompt=prompt)
 ```
 

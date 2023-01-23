@@ -25,10 +25,10 @@ Below is a code snippet for how to use the prompt.
 
 ```python
 from langchain.prompts import load_from_hub
-from langchain.chains.summarize import load_summarize_chain
+from langchain.chains.question_answering import load_qa_chain
 
 llm = ...
-prompt = load_from_hub('summarize/refine/<file-name>')
-chain = load_summarize_chain(llm, chain_type="refine", refine_prompt=prompt)
+prompt = load_from_hub('qa/refine/<file-name>')
+chain = load_qa_chain(llm, chain_type="refine", refine_prompt=prompt)
 ```
 

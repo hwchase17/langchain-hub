@@ -28,7 +28,7 @@ from langchain.prompts import load_from_hub
 from langchain.chains.summarize import load_summarize_chain
 
 llm = ...
-prompt = load_from_hub('summarize/refine/<file-name>')
-chain = load_summarize_chain(llm, chain_type="refine", refine_prompt=prompt)
+prompt = load_from_hub('summarize/map_reduce/map/<file-name>')
+chain = load_summarize_chain(llm, chain_type="map_reduce", map_prompt=prompt)
 ```
 
