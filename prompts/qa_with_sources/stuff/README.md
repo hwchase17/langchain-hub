@@ -25,12 +25,10 @@ Below is a code snippet for how to use the prompt.
 
 ```python
 from langchain.prompts import load_from_hub
-from langchain.chains import ConversationChain
-from langchain.chains.conversation.memory import ConversationSummaryMemory
+from langchain.chains.qa_with_sources import load_qa_with_sources_chain
 
 llm = ...
-prompt = load_from_hub('conversation/summarize/<file-name>')
-memory = ConversationSummaryMemory(llm=llm, prompt=prompt)
-chain = ConversationChain(llm=llm, memory=memory)
+prompt = load_from_hub('qa_with_sources/stuff/<file-name>')
+chain = load_qa_with_sources_chain(llm, chain_type="stuff", prompt=prompt)
 ```
 
