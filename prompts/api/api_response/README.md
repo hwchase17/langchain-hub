@@ -1,22 +1,15 @@
-<!-- Add a template for READMEs that capture the utility of prompts -->
+# Description of API Response Prompts
 
-# Description of {{prompt}}
-
-{{High level text description of the prompt, including use cases.}}
-
-## Compatible Chains
-
-Below is a list of chains we expect this prompt to be compatible with.
-
-1. {{Chain Name}}: {{Path to chain in module}}
-2. ...
+Prompts used to convert the result of an API into natural language.
 
 ## Inputs
 
 This is a description of the inputs that the prompt expects.
 
-1. {{input_var}}: {{Description}}
-2. ...
+1. `api_docs`: Docs for the API being hit.
+2. `question`: Question to be answered.
+3. `api_url`: URL that was hit.
+4. `api_response`: The response returned from hitting said URL.
 
 
 ## Usage

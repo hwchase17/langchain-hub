@@ -1,22 +1,13 @@
-<!-- Add a template for READMEs that capture the utility of prompts -->
+# Description of LLM Math Chain
 
-# Description of {{prompt}}
+Prompt designed to optionally output iPython syntax to be run in order to better answer math questions.
 
-{{High level text description of the prompt, including use cases.}}
-
-## Compatible Chains
-
-Below is a list of chains we expect this prompt to be compatible with.
-
-1. {{Chain Name}}: {{Path to chain in module}}
-2. ...
 
 ## Inputs
 
 This is a description of the inputs that the prompt expects.
 
-1. {{input_var}}: {{Description}}
-2. ...
+1. `question`: User question to be answered.
 
 
 ## Usage

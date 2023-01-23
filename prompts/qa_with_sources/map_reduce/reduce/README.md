@@ -1,8 +1,6 @@
-<!-- Add a template for READMEs that capture the utility of prompts -->
+# Description of QA with Sources Map Reduce Prompts
 
-# Description of {{prompt}}
-
-{{High level text description of the prompt, including use cases.}}
+Prompt
 
 ## Compatible Chains
 

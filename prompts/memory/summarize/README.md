@@ -1,22 +1,14 @@
-<!-- Add a template for READMEs that capture the utility of prompts -->
+# Description of Summarize Memory Prompt
 
-# Description of {{prompt}}
+Prompt designed to summarize conversation history.
 
-{{High level text description of the prompt, including use cases.}}
-
-## Compatible Chains
-
-Below is a list of chains we expect this prompt to be compatible with.
-
-1. {{Chain Name}}: {{Path to chain in module}}
-2. ...
 
 ## Inputs
 
 This is a description of the inputs that the prompt expects.
 
-1. {{input_var}}: {{Description}}
-2. ...
+1. `summary`: Existing summary of conversation up to this point.
+2. `new_lines`: New lines of conversation to be added into the summary.
 
 
 ## Usage

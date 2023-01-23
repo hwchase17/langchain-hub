@@ -9,7 +9,7 @@ Question: {query}
 Table Names: {table_names}
 
 Relevant Table Names:"""
-DECIDER_PROMPT = PromptTemplate(
+PROMPT = PromptTemplate(
     input_variables=["query", "table_names"],
     template=_DECIDER_TEMPLATE,
     output_parser=CommaSeparatedListOutputParser(),

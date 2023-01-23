@@ -1,22 +1,12 @@
-<!-- Add a template for READMEs that capture the utility of prompts -->
+# Description of Summarization Stuff Prompts
 
-# Description of {{prompt}}
-
-{{High level text description of the prompt, including use cases.}}
-
-## Compatible Chains
-
-Below is a list of chains we expect this prompt to be compatible with.
-
-1. {{Chain Name}}: {{Path to chain in module}}
-2. ...
+Prompts designed to be used in summarization chains that use the `stuff` method.
 
 ## Inputs
 
 This is a description of the inputs that the prompt expects.
 
-1. {{input_var}}: {{Description}}
-2. ...
+1. `text`: Text to be summarized.
 
 
 ## Usage

@@ -4,13 +4,6 @@
 
 {{High level text description of the prompt, including use cases.}}
 
-## Compatible Chains
-
-Below is a list of chains we expect this prompt to be compatible with.
-
-1. {{Chain Name}}: {{Path to chain in module}}
-2. ...
-
 ## Inputs
 
 This is a description of the inputs that the prompt expects.

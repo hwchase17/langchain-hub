@@ -1,22 +1,14 @@
-<!-- Add a template for READMEs that capture the utility of prompts -->
+# Description of PAL Prompts
 
-# Description of {{prompt}}
+Prompts to be used with the [PAL](https://arxiv.org/pdf/2211.10435.pdf) chain. 
+These prompts should convert a natural language problem into a series of code snippets to be run to give an answer.
 
-{{High level text description of the prompt, including use cases.}}
-
-## Compatible Chains
-
-Below is a list of chains we expect this prompt to be compatible with.
-
-1. {{Chain Name}}: {{Path to chain in module}}
-2. ...
 
 ## Inputs
 
 This is a description of the inputs that the prompt expects.
 
-1. {{input_var}}: {{Description}}
-2. ...
+1. `question`: The question to be answered.
 
 
 ## Usage

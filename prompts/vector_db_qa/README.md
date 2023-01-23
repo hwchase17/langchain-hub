@@ -1,22 +1,14 @@
-<!-- Add a template for READMEs that capture the utility of prompts -->
+# Description of Vector DB Question Answering Prompt
 
-# Description of {{prompt}}
+Prompts to be used in vector DB question answering chains.
 
-{{High level text description of the prompt, including use cases.}}
-
-## Compatible Chains
-
-Below is a list of chains we expect this prompt to be compatible with.
-
-1. {{Chain Name}}: {{Path to chain in module}}
-2. ...
 
 ## Inputs
 
 This is a description of the inputs that the prompt expects.
 
-1. {{input_var}}: {{Description}}
-2. ...
+1. `context`: Documents pulled from the DB to do question answering over.
+2. `question`: Question to ask of the documents.
 
 
 ## Usage

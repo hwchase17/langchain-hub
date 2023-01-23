@@ -1,22 +1,15 @@
-<!-- Add a template for READMEs that capture the utility of prompts -->
+# Description of QA Refine Prompts
 
-# Description of {{prompt}}
+Prompts designed to be used to refine original answers during question answering chains using the `refine` method.
 
-{{High level text description of the prompt, including use cases.}}
-
-## Compatible Chains
-
-Below is a list of chains we expect this prompt to be compatible with.
-
-1. {{Chain Name}}: {{Path to chain in module}}
-2. ...
 
 ## Inputs
 
 This is a description of the inputs that the prompt expects.
 
-1. {{input_var}}: {{Description}}
-2. ...
+1. `question`: Original question to be answered.
+2. `existing_answer`: Existing answer from previous documents.
+3. `context_str`: New piece of context to use to refine the existing answer.
 
 
 ## Usage
