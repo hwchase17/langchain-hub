@@ -1,27 +1,34 @@
-# Hello World
-> A simple prompt as an example
+<!-- Add a template for READMEs that capture the utility of prompts -->
 
+# Description of {{prompt}}
 
-## Configuration
-- input_variables: []
-  - There are no inputs
-- output_parser: null
-  - There is no output parsing needed
-- template: 'Say hello world.'
-  - Just a simple hello.
-template_format: f-string
-  - We use standard f-string formatting here.
+{{High level text description of the prompt, including use cases.}}
+
+## Compatible Chains
+
+Below is a list of chains we expect this prompt to be compatible with.
+
+1. {{Chain Name}}: {{Path to chain in module}}
+2. ...
+
+## Inputs
+
+This is a description of the inputs that the prompt expects.
+
+1. {{input_var}}: {{Description}}
+2. ...
+
 
 ## Usage
 
-Ex:
-```python3
-from langchain.prompts import load_from_hub
-from langchain.llms import OpenAI
-from langchain.prompts.loading import load_prompt
+Below is a code snippet for how to use the prompt.
 
-llm = OpenAI(temperature=0.9)
-# prompt = load_from_hub("hello-world/prompt.yaml")
-output = llm(prompt.format())
-print(output)
+```python
+from langchain.prompts import load_from_hub
+from langchain.chains import LLMChain
+
+llm = ...
+prompt = load_from_hub('hello-world/<file-name>')
+chain = LLMChain(llm=llm, prompt=prompt)
 ```
+

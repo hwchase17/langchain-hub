@@ -1,6 +1,34 @@
-This prompt refines an existing answer to a question given context, with additional instructions to update the sources used.
+<!-- Add a template for READMEs that capture the utility of prompts -->
 
-The inputs are:
-1. question
-2. existing_answer
-3. context_str
+# Description of {{prompt}}
+
+{{High level text description of the prompt, including use cases.}}
+
+## Compatible Chains
+
+Below is a list of chains we expect this prompt to be compatible with.
+
+1. {{Chain Name}}: {{Path to chain in module}}
+2. ...
+
+## Inputs
+
+This is a description of the inputs that the prompt expects.
+
+1. {{input_var}}: {{Description}}
+2. ...
+
+
+## Usage
+
+Below is a code snippet for how to use the prompt.
+
+```python
+from langchain.prompts import load_from_hub
+from langchain.chains.question_answering import load_qa_chain
+
+llm = ...
+prompt = load_from_hub('qa/refine/<file-name>')
+chain = load_qa_chain(llm, chain_type="refine", refine_prompt=prompt)
+```
+

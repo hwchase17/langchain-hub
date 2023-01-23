@@ -25,11 +25,10 @@ Below is a code snippet for how to use the prompt.
 
 ```python
 from langchain.prompts import load_from_hub
-from langchain.chains import VectorDBQA
+from langchain.chains import LLMMathChain
 
 llm = ...
-vectorstore = ...
-prompt = load_from_hub('vector_db_qa/<file-name>')
-chain = VectorDBQA.from_llm(llm, prompt=prompt, vectorstore=vectorstore)
+prompt = load_from_hub('llm_math/<file-name>')
+chain = LLMMathChain(llm=llm, prompt=prompt)
 ```
 
