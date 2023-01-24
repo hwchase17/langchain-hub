@@ -17,12 +17,12 @@ This is a description of the inputs that the prompt expects.
 Below is a code snippet for how to use the prompt.
 
 ```python
-from langchain.prompts import load_from_hub
+from langchain.prompts import load_prompt
 from langchain.chains import APIChain
 
 llm = ...
 api_docs = ...
-prompt = load_from_hub('api/api_response/<file-name>')
+prompt = load_prompt('lc://prompts/api/api_response/<file-name>')
 chain = APIChain.from_llm_and_api_docs(llm, api_docs, api_response_prompt=prompt)
 ```
 
