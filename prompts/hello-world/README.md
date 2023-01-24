@@ -3,6 +3,11 @@
 Basic prompt designed to be use as a test case, will just instruct the LLM to say "Hello World".
 
 
+## Inputs
+
+This prompt doesn't have any inputs.
+
+
 ## Usage
 
 Below is a code snippet for how to use the prompt.

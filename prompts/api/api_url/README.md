@@ -23,4 +23,3 @@ api_docs = ...
 prompt = load_prompt('lc://prompts/api/api_url/<file-name>')
 chain = APIChain.from_llm_and_api_docs(llm, api_docs, api_url_prompt=prompt)
 ```
-

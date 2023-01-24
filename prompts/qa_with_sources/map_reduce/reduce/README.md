@@ -1,20 +1,14 @@
 # Description of QA with Sources Map Reduce Prompts
 
-Prompt
-
-## Compatible Chains
-
-Below is a list of chains we expect this prompt to be compatible with.
-
-1. {{Chain Name}}: {{Path to chain in module}}
-2. ...
+This prompt enables the user to perform question answering while providing sources.
+It uses the map reduce chain for doing QA. This specific prompt reduces the answer generated during the question stage.
 
 ## Inputs
 
 This is a description of the inputs that the prompt expects.
 
-1. {{input_var}}: {{Description}}
-2. ...
+1. `summaries`: Summaries generated during the map step.
+2. `question`: Original question to be answered.
 
 
 ## Usage
