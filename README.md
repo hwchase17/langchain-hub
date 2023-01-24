@@ -2,74 +2,31 @@
 
 [Warning: very beta, may change drastically]
 
-Taking inspiration from Hugging Face Hub, LangChainHub is collection of all artifacts useful for working with LangChain primitives such as prompts, chains and agents. The goal of this repository is to be a central resource for sharing and discovering high quality prompts, chains and agents that combine together to form complex LLM applications.
+Taking inspiration from Hugging Face Hub, LangChainHub is collection of all artifacts useful for working with LangChain primitives such as prompts, chains and agents. 
+The goal of this repository is to be a central resource for sharing and discovering high quality prompts, chains and agents that combine together to form complex LLM applications.
 
-We are starting off the hub with a collection of prompts, and we look forward to the LangChain community adding to this collection.
+We are starting off the hub with a collection of prompts, and we look forward to the LangChain community adding to this collection. We hope to expand to chains and agents shortly.
 
-## Prompts
+## 📖 Prompts
 
-### Loading
-
-All prompts can be loaded from LangChain by specifying the desired path, and adding the `lc://` prefix. The path should be relative to the `langchain-hub` repo.
-
-For example, to load the prompt at the path `langchain-hub/prompts/qa/stuff/basic/prompt.yaml`, the path you want to specify is `lc://prompts/qa/stuff/basic/prompt.yaml`
-
-Once you have that path, you can load it in the following manner:
+At a high level, prompts are organized by use case inside the `prompts` directory.
+To load a prompt in LangChain, you should use the following code snippet:
 
 ```python
 from langchain.prompts import load_prompt
 
-prompt = load_prompt('lc://prompts/qa/stuff/basic/prompt.yaml')
+prompt = load_prompt('lc://prompts/path/to/file.json')
 ```
 
-### Uploading
+In addition to prompt files themselves, each sub-directory also contains a README explaining how best to use that prompt in the appropriate LangChain chain.
 
-To upload a prompt to the LangChainHub, you must upload 2 files:
-1. The prompt. There are 3 supported file formats for prompts: `json`, `yaml`, and `python`. The suggested options are `json` and `yaml`, but we provide `python` as an option for more flexibility. Please see the below sections for instructions for uploading each format.
-2. Associated README file for the prompt. This provides a high level description of the prompt, usage patterns of the prompt and chains that the prompt is compatible with. For more details, check out langchain-hub/readme_template.
-   If you are uploading a prompt to an existing directory, it should already have a README file and so this should not be necessary.
+For more detailed information on how prompts are organized in the Hub, and how best to upload one, please see the documentation [here](./prompts/README.md)
 
-
-The prompts on the hub are organized by use case. The use cases are reflected in the directory structure and names, and each separate directory represents a different use case. You should upload your prompt file to a folder in the appropriate use case section.
-
-
-If adding a prompt to an existing use case folder, then make sure that the prompt:
-1. services the same use case as the existing prompt(s) in that folder, and
-2. has the same inputs as the existing prompt(s).
-
-A litmus test to make sure that multiple prompts belong in the same folder: the existing README file for that folder should also apply to the new prompt being added.
-
-
-#### Supported file formats
-
-##### `json`
-To get a properly formatted json file, if you have prompt in memory in Python you can run:
-```python
-prompt.save("file_name.json")
-```
-
-Replace `"file_name"` with the desired name of the file.
-
-##### `yaml`
-To get a properly formatted yaml file, if you have prompt in memory in Python you can run:
-```python
-prompt.save("file_name.yaml")
-```
-
-Replace `"file_name"` with the desired name of the file.
-
-
-##### `python`
-To get a properly formatted Python file, you should upload a Python file that exposes a `PROMPT` variable.
-This is the variable that will be loaded.
-This variable should be an instance of a subclass of BasePromptTemplate in LangChain.
-
-
-## Chains
+## 🔗 Chains
 
 Coming soon!
 
 
-## Agents
+## 🤖 Agents
 
 Coming soon!
