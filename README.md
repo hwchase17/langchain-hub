@@ -20,12 +20,14 @@ Please refer to the appropriate documentation to do so.
 ## 📖 Prompts
 
 At a high level, prompts are organized by use case inside the `prompts` directory.
-To load a prompt in LangChain, you should use the following code snippet:
+
+To load a prompt in LangChain, you should use the `load_prompt` method. 
+For example, to load the `hello-world` prompt you can use the following snippet:
 
 ```python
 from langchain.prompts import load_prompt
 
-prompt = load_prompt('lc://prompts/path/to/file.json')
+prompt = load_prompt('lc://prompts/hello-world/prompt.yaml')
 ```
 
 In addition to prompt files themselves, each sub-directory also contains a README explaining how best to use that prompt in the appropriate LangChain chain.
