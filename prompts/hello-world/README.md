@@ -8,11 +8,11 @@ Basic prompt designed to be use as a test case, will just instruct the LLM to sa
 Below is a code snippet for how to use the prompt.
 
 ```python
-from langchain.prompts import load_from_hub
+from langchain.prompts import load_prompt
 from langchain.chains import LLMChain
 
 llm = ...
-prompt = load_from_hub('hello-world/<file-name>')
+prompt = load_prompt('lc://prompts/hello-world/<file-name>')
 chain = LLMChain(llm=llm, prompt=prompt)
 ```
 

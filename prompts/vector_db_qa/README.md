@@ -16,12 +16,12 @@ This is a description of the inputs that the prompt expects.
 Below is a code snippet for how to use the prompt.
 
 ```python
-from langchain.prompts import load_from_hub
+from langchain.prompts import load_prompt
 from langchain.chains import VectorDBQA
 
 llm = ...
 vectorstore = ...
-prompt = load_from_hub('vector_db_qa/<file-name>')
+prompt = load_prompt('lc://prompts/vector_db_qa/<file-name>')
 chain = VectorDBQA.from_llm(llm, prompt=prompt, vectorstore=vectorstore)
 ```
 

@@ -17,8 +17,8 @@ For example, if there is a file at `prompts/qa/stuff/basic/prompt.yaml`, the pat
 Once you have that path, you can load it in the following manner:
 
 ```python
-from langchain.prompts import load_from_hub
-prompt = load_from_hub("qa/stuff/basic/prompt.yaml")
+from langchain.prompts import load_prompt
+prompt = load_prompt('lc://prompts/qa/stuff/basic/prompt.yaml')
 ```
 
 ## Uploading

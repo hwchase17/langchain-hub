@@ -16,12 +16,12 @@ This is a description of the inputs that the prompt expects.
 Below is a code snippet for how to use the prompt.
 
 ```python
-from langchain.prompts import load_from_hub
+from langchain.prompts import load_prompt
 from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import ConversationSummaryMemory
 
 llm = ...
-prompt = load_from_hub('memory/summarize/<file-name>')
+prompt = load_prompt('lc://prompts/memory/summarize/<file-name>')
 memory = ConversationSummaryMemory(llm=llm, prompt=prompt)
 chain = ConversationChain(llm=llm, memory=memory)
 ```

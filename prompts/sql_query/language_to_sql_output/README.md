@@ -18,12 +18,12 @@ This is a description of the inputs that the prompt expects.
 Below is a code snippet for how to use the prompt.
 
 ```python
-from langchain.prompts import load_from_hub
+from langchain.prompts import load_prompt
 from langchain.chains import SQLDatabaseChain
 
 llm = ...
 database = ...
-prompt = load_from_hub('sql_query/language_to_sql_output/<file-name>')
+prompt = load_prompt('lc://prompts/sql_query/language_to_sql_output/<file-name>')
 chain = SQLDatabaseChain(llm=llm, database=database, prompt=prompt)
 ```
 

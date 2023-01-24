@@ -15,11 +15,11 @@ This is a description of the inputs that the prompt expects.
 Below is a code snippet for how to use the prompt.
 
 ```python
-from langchain.prompts import load_from_hub
+from langchain.prompts import load_prompt
 from langchain.chains import LLMMathChain
 
 llm = ...
-prompt = load_from_hub('llm_math/<file-name>')
+prompt = load_prompt('lc://prompts/llm_math/<file-name>')
 chain = LLMMathChain(llm=llm, prompt=prompt)
 ```
 
