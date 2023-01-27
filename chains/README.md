@@ -14,7 +14,7 @@ Once you have that path, you can load it in the following manner:
 ```python
 from langchain.chains import load_chain
 
-chain = load_chain("lc://agents/self-ask-with-search/agent.json", **kwargs)
+chain = load_chain("lc://chains/hello-world/chain.json")
 ```
 
 Extra arguments (kwargs) may be needed depending on the type of chain.
