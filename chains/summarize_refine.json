@@ -1,0 +1,76 @@
+{
+    "memory": null,
+    "verbose": false,
+    "input_key": "input_documents",
+    "output_key": "output_text",
+    "initial_llm_chain": {
+        "memory": null,
+        "verbose": false,
+        "prompt": {
+            "input_variables": [
+                "text"
+            ],
+            "output_parser": null,
+            "template": "Write a concise summary of the following:\n\n\n\"{text}\"\n\n\nCONCISE SUMMARY:",
+            "template_format": "f-string",
+            "_type": "prompt"
+        },
+        "llm": {
+            "model_name": "text-davinci-003",
+            "temperature": 0.0,
+            "max_tokens": 256,
+            "top_p": 1,
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "n": 1,
+            "best_of": 1,
+            "request_timeout": null,
+            "logit_bias": {},
+            "_type": "openai"
+        },
+        "output_key": "text",
+        "_type": "llm_chain"
+    },
+    "refine_llm_chain": {
+        "memory": null,
+        "verbose": false,
+        "prompt": {
+            "input_variables": [
+                "existing_answer",
+                "text"
+            ],
+            "output_parser": null,
+            "template": "Your job is to produce a final summary\nWe have provided an existing summary up to a certain point: {existing_answer}\nWe have the opportunity to refine the existing summary(only if needed) with some more context below.\n------------\n{text}\n------------\nGiven the new context, refine the original summaryIf the context isn't useful, return the original summary.",
+            "template_format": "f-string",
+            "_type": "prompt"
+        },
+        "llm": {
+            "model_name": "text-davinci-003",
+            "temperature": 0.0,
+            "max_tokens": 256,
+            "top_p": 1,
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "n": 1,
+            "best_of": 1,
+            "request_timeout": null,
+            "logit_bias": {},
+            "_type": "openai"
+        },
+        "output_key": "text",
+        "_type": "llm_chain"
+    },
+    "document_variable_name": "text",
+    "initial_response_name": "existing_answer",
+    "document_prompt": {
+        "input_variables": [
+            "page_content"
+        ],
+        "output_parser": null,
+        "template": "{page_content}",
+        "template_format": "f-string",
+        "_type": "prompt"
+    },
+    "return_intermediate_steps": false,
+    "_type": "refine_documents_chain"
+}
