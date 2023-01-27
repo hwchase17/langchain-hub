@@ -17,7 +17,7 @@ from langchain.agents import initialize_agent
 llm = ...
 tools = ...
 
-agent = initialize_agent(tools, llm, agent="lc://agents/self-ask-with-search/agent.json")
+agent = initialize_agent(tools, llm, agent_path="lc://agents/self-ask-with-search/agent.json")
 ```
 
 ## Uploading
