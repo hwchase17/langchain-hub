@@ -1,0 +1,37 @@
+{
+    "llm_chain": {
+        "memory": null,
+        "verbose": false,
+        "prompt": {
+            "input_variables": [
+                "input",
+                "agent_scratchpad"
+            ],
+            "output_parser": null,
+            "template": "Question: Who lived longer, Muhammad Ali or Alan Turing?\nAre follow up questions needed here: Yes.\nFollow up: How old was Muhammad Ali when he died?\nIntermediate answer: Muhammad Ali was 74 years old when he died.\nFollow up: How old was Alan Turing when he died?\nIntermediate answer: Alan Turing was 41 years old when he died.\nSo the final answer is: Muhammad Ali\n\nQuestion: When was the founder of craigslist born?\nAre follow up questions needed here: Yes.\nFollow up: Who was the founder of craigslist?\nIntermediate answer: Craigslist was founded by Craig Newmark.\nFollow up: When was Craig Newmark born?\nIntermediate answer: Craig Newmark was born on December 6, 1952.\nSo the final answer is: December 6, 1952\n\nQuestion: Who was the maternal grandfather of George Washington?\nAre follow up questions needed here: Yes.\nFollow up: Who was the mother of George Washington?\nIntermediate answer: The mother of George Washington was Mary Ball Washington.\nFollow up: Who was the father of Mary Ball Washington?\nIntermediate answer: The father of Mary Ball Washington was Joseph Ball.\nSo the final answer is: Joseph Ball\n\nQuestion: Are both the directors of Jaws and Casino Royale from the same country?\nAre follow up questions needed here: Yes.\nFollow up: Who is the director of Jaws?\nIntermediate answer: The director of Jaws is Steven Spielberg.\nFollow up: Where is Steven Spielberg from?\nIntermediate answer: The United States.\nFollow up: Who is the director of Casino Royale?\nIntermediate answer: The director of Casino Royale is Martin Campbell.\nFollow up: Where is Martin Campbell from?\nIntermediate answer: New Zealand.\nSo the final answer is: No\n\nQuestion: {input}\nAre followup questions needed here:{agent_scratchpad}",
+            "template_format": "f-string"
+        },
+        "llm": {
+            "model_name": "text-davinci-003",
+            "temperature": 0.0,
+            "max_tokens": 256,
+            "top_p": 1,
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "n": 1,
+            "best_of": 1,
+            "request_timeout": null,
+            "logit_bias": {},
+            "_type": "openai"
+        },
+        "output_key": "text",
+        "_type": "llm_chain"
+    },
+    "allowed_tools": [
+        "Intermediate Answer"
+    ],
+    "return_values": [
+        "output"
+    ],
+    "_type": "self-ask-with-search"
+}
