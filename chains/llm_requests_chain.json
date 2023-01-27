@@ -1,0 +1,38 @@
+{
+    "memory": null,
+    "verbose": false,
+    "llm_chain": {
+        "memory": null,
+        "verbose": false,
+        "prompt": {
+            "input_variables": [
+                "query",
+                "requests_result"
+            ],
+            "output_parser": null,
+            "template": "Between >>> and <<< are the raw search result text from google.\nExtract the answer to the question '{query}' or say \"not found\" if the information is not contained.\nUse the format\nExtracted:<answer or \"not found\">\n>>> {requests_result} <<<\nExtracted:",
+            "template_format": "f-string",
+            "_type": "prompt"
+        },
+        "llm": {
+            "model_name": "text-davinci-003",
+            "temperature": 0.0,
+            "max_tokens": 256,
+            "top_p": 1,
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "n": 1,
+            "best_of": 1,
+            "request_timeout": null,
+            "logit_bias": {},
+            "_type": "openai"
+        },
+        "output_key": "text",
+        "_type": "llm_chain"
+    },
+    "text_length": 8000,
+    "requests_key": "requests_result",
+    "input_key": "url",
+    "output_key": "output",
+    "_type": "llm_requests_chain"
+}

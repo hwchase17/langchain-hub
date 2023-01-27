@@ -1,0 +1,78 @@
+{
+    "memory": null,
+    "verbose": false,
+    "input_key": "input_documents",
+    "output_key": "output_text",
+    "initial_llm_chain": {
+        "memory": null,
+        "verbose": false,
+        "prompt": {
+            "input_variables": [
+                "context_str",
+                "question"
+            ],
+            "output_parser": null,
+            "template": "Context information is below. \n---------------------\n{context_str}\n---------------------\nGiven the context information and not prior knowledge, answer the question: {question}\n",
+            "template_format": "f-string",
+            "_type": "prompt"
+        },
+        "llm": {
+            "model_name": "text-davinci-003",
+            "temperature": 0.0,
+            "max_tokens": 256,
+            "top_p": 1,
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "n": 1,
+            "best_of": 1,
+            "request_timeout": null,
+            "logit_bias": {},
+            "_type": "openai"
+        },
+        "output_key": "text",
+        "_type": "llm_chain"
+    },
+    "refine_llm_chain": {
+        "memory": null,
+        "verbose": false,
+        "prompt": {
+            "input_variables": [
+                "question",
+                "existing_answer",
+                "context_str"
+            ],
+            "output_parser": null,
+            "template": "The original question is as follows: {question}\nWe have provided an existing answer: {existing_answer}\nWe have the opportunity to refine the existing answer(only if needed) with some more context below.\n------------\n{context_str}\n------------\nGiven the new context, refine the original answer to better answer the question. If the context isn't useful, return the original answer.",
+            "template_format": "f-string",
+            "_type": "prompt"
+        },
+        "llm": {
+            "model_name": "text-davinci-003",
+            "temperature": 0.0,
+            "max_tokens": 256,
+            "top_p": 1,
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "n": 1,
+            "best_of": 1,
+            "request_timeout": null,
+            "logit_bias": {},
+            "_type": "openai"
+        },
+        "output_key": "text",
+        "_type": "llm_chain"
+    },
+    "document_variable_name": "context_str",
+    "initial_response_name": "existing_answer",
+    "document_prompt": {
+        "input_variables": [
+            "page_content"
+        ],
+        "output_parser": null,
+        "template": "{page_content}",
+        "template_format": "f-string",
+        "_type": "prompt"
+    },
+    "return_intermediate_steps": false,
+    "_type": "refine_documents_chain"
+}
