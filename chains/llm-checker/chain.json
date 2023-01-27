@@ -1,0 +1,57 @@
+{
+    "memory": null,
+    "verbose": true,
+    "llm": {
+        "model_name": "text-davinci-003",
+        "temperature": 0.7,
+        "max_tokens": 256,
+        "top_p": 1,
+        "frequency_penalty": 0,
+        "presence_penalty": 0,
+        "n": 1,
+        "best_of": 1,
+        "request_timeout": null,
+        "logit_bias": {},
+        "_type": "openai"
+    },
+    "create_draft_answer_prompt": {
+        "input_variables": [
+            "question"
+        ],
+        "output_parser": null,
+        "template": "{question}\n\n",
+        "template_format": "f-string",
+        "_type": "prompt"
+    },
+    "list_assertions_prompt": {
+        "input_variables": [
+            "statement"
+        ],
+        "output_parser": null,
+        "template": "Here is a statement:\n{statement}\nMake a bullet point list of the assumptions you made when producing the above statement.\n\n",
+        "template_format": "f-string",
+        "_type": "prompt"
+    },
+    "check_assertions_prompt": {
+        "input_variables": [
+            "assertions"
+        ],
+        "output_parser": null,
+        "template": "Here is a bullet point list of assertions:\n{assertions}\nFor each assertion, determine whether it is true or false. If it is false, explain why.\n\n",
+        "template_format": "f-string",
+        "_type": "prompt"
+    },
+    "revised_answer_prompt": {
+        "input_variables": [
+            "checked_assertions",
+            "question"
+        ],
+        "output_parser": null,
+        "template": "{checked_assertions}\n\nQuestion: In light of the above assertions and checks, how would you answer the question '{question}'?\n\nAnswer:",
+        "template_format": "f-string",
+        "_type": "prompt"
+    },
+    "input_key": "query",
+    "output_key": "result",
+    "_type": "llm_checker_chain"
+}
