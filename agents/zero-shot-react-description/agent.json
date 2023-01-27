@@ -1,0 +1,6 @@
+{
+  "load_from_llm_and_tools": true,
+  "_type": "zero-shot-react-description",
+  "prefix": "Answer the following questions as best you can. You have access to the following tools:",
+  "suffix": "Begin!\n\nQuestion: {input}\nThought:{agent_scratchpad}"
+}
