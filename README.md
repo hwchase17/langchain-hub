@@ -34,9 +34,40 @@ For more detailed information on how prompts are organized in the Hub, and how b
 
 ## 🔗 Chains
 
-Coming soon!
+At a high level, chains are organized by use case inside the `chains` directory.
+To load a chain in LangChain, you should use the following code snippet:
+
+```python
+from langchain.chains import load_chain
+
+chain = load_chain('lc://chains/path/to/file.json')
+```
+
+In addition to chain files themselves, each sub-directory also contains a README explaining what that chain contains.
+
+For more detailed information on how chains are organized in the Hub, and how best to upload one, please see the documentation [here](./chains/README.md).
 
 
 ## 🤖 Agents
+
+At a high level, chains are organized by use case inside the `chains` directory.
+To load a chain in LangChain, you should use the following code snippet:
+
+```python
+from langchain.agents import initialize_agent
+
+llm = ...
+tools = ...
+
+agent = initialize_agent(tools, llm, agent="lc://agents/self-ask-with-search/agent.json")
+```
+
+In addition to agent files themselves, each sub-directory also contains a README explaining what that agent contains.
+
+For more detailed information on how agents are organized in the Hub, and how best to upload one, please see the documentation [here](./agents/README.md).
+
+
+
+## 👷 Agent Executors
 
 Coming soon!
