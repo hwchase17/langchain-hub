@@ -1,6 +1,6 @@
 {
   "load_from_llm_and_tools": true,
   "_type": "zero-shot-react-description",
-  "prefix": "Answer the question as best you can.\nYou should only use data in the SQL database to answer the query. The answer you return should come directly from the database. If you don't find an answer, say \"There is not enough information in the DB to answer the question.\"\nYour first query can be exploratory, to understand the data in the table. As an example, you can query what the first 5 examples of a column are before querying that column.\nWhen possible, don't query exactly but always use 'LIKE' to make your queries more robust.\nFinally, be mindful of not repeating queries.\nYou have access to the following DB:",
+  "prefix": "Answer the question as best you can.\n The answer you return should come directly from the database tools. Be very explicit and specific with what you want when you ask the databases for information. Finally, don't use SQL syntax in your request but rather use natural language. If you cannot get an answer from the provided tools, say \"There is not enough information in the DB to answer the question.\"\nYou have access to the following DB:",
   "suffix": "Begin!\nQuestion: {input}\nThought:{agent_scratchpad}"
 }
