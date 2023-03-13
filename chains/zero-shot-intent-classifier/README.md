@@ -7,11 +7,15 @@ Instead of training one bespoke: you can probably just use this directly with no
 
 ## Use
 
-    from langchain.chains import load_chain
+```python
+from langchain.chains import load_chain
 
-    chain = load_chain("lc://chains/zero-shot-intent-classifier/chain.json")
-    chain.run("how would I drive from my home to SeaTac airport?")
-    ## {'intent': 'get_directions', 'arguments': {'start_location': 'home', 'end_location': 'SeaTac airport'}}
+chain = load_chain("lc://chains/zero-shot-intent-classifier/chain.json")
+input_query = "how would I drive from my home to SeaTac airport?"
+chain.run(input_query)
+
+# {'intent': 'get_directions', 'arguments': {'start_location': 'home', 'end_location': 'SeaTac airport'}}
+```
 
 ## Compiled Prompt
 
