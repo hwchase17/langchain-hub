@@ -1,0 +1,30 @@
+{
+    "memory": null,
+    "verbose": false,
+    "prompt": {
+        "input_variables": [
+            "spoken_request"
+        ],
+        "output_parser": null,
+        "partial_variables": {},
+        "template": "Act as the intent classification component of a home assistant, similar to Amazon Alexa (except your name is 'Becca', not 'Alexa').\nCommon intents include: play_internet_radio, play_song_by_artist, get_weather, current_time, set_timer, remind_me, ...\nYou receive input in json format: `{{\"input\":...}}`\nYou respond in json format: `{{\"intent\":..., \"arguments\":{{ ... }}, }}}}`\n\n{{\"input\":{spoken_request}}}",
+        "template_format": "f-string",
+        "validate_template": true,
+        "_type": "prompt"
+    },
+    "llm": {
+        "model_name": "text-davinci-003",
+        "temperature": 0.1,
+        "max_tokens": 256,
+        "top_p": 1,
+        "frequency_penalty": 0,
+        "presence_penalty": 0,
+        "n": 1,
+        "best_of": 1,
+        "request_timeout": null,
+        "logit_bias": {},
+        "_type": "openai"
+    },
+    "output_key": "text",
+    "_type": "llm_chain"
+}
