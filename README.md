@@ -1,8 +1,7 @@
 # LangChainHub
 
-[Warning: very beta, may change drastically]
-
-[Google Form](https://forms.gle/aAhZ6nEUybdzVbYq6) for submitting new prompts.
+| 🌐 This repo is getting replaced by our hosted LangChain Hub Product! Visit it at [https://smith.langchain.com/hub](https://smith.langchain.com/hub) 🌐 |
+| --- |
 
 ## Introduction
 
