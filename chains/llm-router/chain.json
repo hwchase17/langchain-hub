@@ -1,0 +1,130 @@
+{
+  "memory": null,
+  "verbose": true,
+  "prompt": {
+    "input_variables": [
+      "history",
+      "input"
+    ],
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "The following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.\n\nCurrent conversation:\n{history}\nHuman: {input}\nAI:",
+    "template_format": "f-string",
+    "validate_template": true,
+    "_type": "prompt"
+  },
+  "llm": {
+    "model_name": "text-davinci-003",
+    "temperature": 0.3,
+    "max_tokens": 256,
+    "top_p": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "n": 1,
+    "best_of": 1,
+    "request_timeout": null,
+    "logit_bias": {},
+    "_type": "openai"
+  },
+  "output_key": "output",
+  "last_chain": null,
+  "chains": {
+    "space": {
+      "memory": null,
+      "verbose": false,
+      "prompt": {
+        "input_variables": [
+          "question"
+        ],
+        "output_parser": null,
+        "partial_variables": {},
+        "template": "Assume that your Elon musk and are very concerned about future of human civilization beyond Earth. \n\nAnswer the following question keeping this in mind and provide answers that help in clarifying how \nwould humans survive as an interplanetary species. If the question is not relevant then say \"I don't know\" and do not make up any answer.\nQuestion related to space and how humans could survive:         \n{question}\n",
+        "template_format": "f-string",
+        "validate_template": true,
+        "_type": "prompt"
+      },
+      "llm": {
+        "model_name": "text-davinci-003",
+        "temperature": 0.9,
+        "max_tokens": 256,
+        "top_p": 1,
+        "frequency_penalty": 0,
+        "presence_penalty": 0,
+        "n": 1,
+        "best_of": 1,
+        "request_timeout": null,
+        "logit_bias": {},
+        "_type": "openai"
+      },
+      "output_key": "text",
+      "_type": "llm_chain"
+    },
+    "architecture": {
+      "memory": null,
+      "verbose": false,
+      "prompt": {
+        "input_variables": [
+          "question"
+        ],
+        "output_parser": null,
+        "partial_variables": {},
+        "template": "Assume the role of a software architect who's really experienced in dealing with and scaling large scale distributed systems. \nAnswer the questions specifically on software design problems as indicated below. If the question is not relevant then say \"I don't know\" and do not make up any answer. \n\nQuestion related to distributed systems and large scale software design\n{question}\n\nPlease also include references in your answers to popular websites where more we can get more context.\n",
+        "template_format": "f-string",
+        "validate_template": true,
+        "_type": "prompt"
+      },
+      "llm": {
+        "model_name": "text-davinci-003",
+        "temperature": 0.9,
+        "max_tokens": 256,
+        "top_p": 1,
+        "frequency_penalty": 0,
+        "presence_penalty": 0,
+        "n": 1,
+        "best_of": 1,
+        "request_timeout": null,
+        "logit_bias": {},
+        "_type": "openai"
+      },
+      "output_key": "text",
+      "_type": "llm_chain"
+    },
+    "biotechnology": {
+      "memory": null,
+      "verbose": false,
+      "prompt": {
+        "input_variables": [
+          "question"
+        ],
+        "output_parser": null,
+        "partial_variables": {},
+        "template": "Assume the role of a genetic expert who has unlocked the secrets of our genetic make up and is able to provide clear answers to questions below.\nOptimize for answers that provide directions for improving current problems around genetic defects and how we can overcome them.  If the question is not relevant then say \"I don't know\" and do not make up any answer.\n\nQuestion related to bio technology and related use cases.                 \n{question}\n",
+        "template_format": "f-string",
+        "validate_template": true,
+        "_type": "prompt"
+      },
+      "llm": {
+        "model_name": "text-davinci-003",
+        "temperature": 0.9,
+        "max_tokens": 256,
+        "top_p": 1,
+        "frequency_penalty": 0,
+        "presence_penalty": 0,
+        "n": 1,
+        "best_of": 1,
+        "request_timeout": null,
+        "logit_bias": {},
+        "_type": "openai"
+      },
+      "output_key": "text",
+      "_type": "llm_chain"
+    }
+  },
+  "strip_outputs": false,
+  "input_key": "input",
+  "vector_collection": {
+    "name": "router",
+    "metadata": null
+  },
+  "_type": "router_chain"
+}
